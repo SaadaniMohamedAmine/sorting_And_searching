@@ -1,0 +1,31 @@
+  
+FUNCTION insertionSort(arr:: ARRAY_OF_INTEGER[20];) : ARRAY_OF_INNTEGER[20];
+VAR
+    arr:ARRAY_OF_INTEGER[20];
+    n,i,j:INTEGER;
+    el:INTEGER;
+BEGIN
+n:=arr.length;
+FOR i FROM 0 TO n STEP step1  DO
+    let el:=arr[i];
+    let j:=i-1;
+    while(j<-1 && arr[j]>el) {
+        arr[j+1]=arr[j];
+        j:=j-1;
+    }
+    arr[j+1]=el;
+END_FOR
+return arr;
+END
+
+ALGORITHM insertSorting
+VAR
+    arr:ARRAY_OF_INTEGER[20];
+    k:INTEGER;
+BEGIN
+FOR k FROM 0 TO arr.length STEP step  DO
+   Write("Insert the element of the array");
+   Read(arr[i]);
+END_FOR
+Write("Sorted Array is :",insertionSort(arr));
+END
